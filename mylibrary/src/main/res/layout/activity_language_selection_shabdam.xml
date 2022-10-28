@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.activity.LanguageSelectionShabdamActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="5dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/language_bg_shabdam" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/lLayHindiBtn"
+                    android:gravity="center"
+                    android:text="Choose Language"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <LinearLayout
+                    android:id="@+id/lLayHindiBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_above="@+id/lLayEnglishBtn"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/grey_curve_btn_drawable"
+                    android:gravity="center">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="हिन्दी"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lLayEnglishBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="30dp"
+                    android:background="@drawable/grey_curve_btn_drawable"
+                    android:gravity="center">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="English"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+
+    <!--  <LinearLayout
+          android:layout_marginHorizontal="10dp"
+          android:orientation="horizontal"
+          android:layout_width="match_parent"
+          android:layout_height="80dp">
+
+          <LinearLayout
+              android:id="@+id/lLayEnglishBtn"
+              android:padding="7dp"
+              android:layout_weight="1"
+              android:background="@drawable/white_bg_language_drawable"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+              <TextView
+                  android:gravity="center"
+                  android:textColor="@color/white"
+                  android:textSize="16sp"
+                  android:fontFamily="@font/mukta_bold"
+                  android:text="English"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"/>
+          </LinearLayout>
+
+          <View
+              android:background="@color/bg_gray_dark"
+              android:layout_width="1dp"
+              android:layout_height="match_parent"/>
+
+          <LinearLayout
+              android:id="@+id/lLayHindiBtn"
+              android:padding="7dp"
+              android:background="@drawable/hindi_bg_drawale"
+              android:layout_weight="1"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+              <TextView
+                  android:gravity="center"
+                  android:textColor="@color/white"
+                  android:textSize="16sp"
+                  android:fontFamily="@font/mukta_bold"
+                  android:text="Hindi"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"/>
+          </LinearLayout>
+
+      </LinearLayout>-->
+
+</LinearLayout>

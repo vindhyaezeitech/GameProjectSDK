@@ -1,0 +1,1101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".GameActivity">
+
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="false"
+        tools:openDrawer="start">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50sdp"
+                    android:background="@drawable/radius_background"
+                    android:elevation="@dimen/_10sdp">
+
+                    <ImageView
+                        android:id="@+id/ivHamburger"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:src="@drawable/ic_menu"
+                        android:visibility="visible" />
+
+                    <ImageView
+                        android:id="@+id/iv_question_mark_btn"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_toEndOf="@id/ivHamburger"
+                        android:src="@drawable/question_mark_icon" />
+
+                    <ImageView
+                        android:id="@+id/ivHome"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_toEndOf="@id/iv_question_mark_btn"
+                        android:src="@drawable/ic_hom"
+                        android:visibility="visible" />
+
+
+                    <TextView
+                        android:id="@+id/tv_uname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="sans-serif-medium"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_settings_btn"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_toLeftOf="@+id/iv_LangChange"
+                        android:layout_height="@dimen/_20sdp"
+                        android:visibility="gone"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:src="@drawable/settings_icon" />
+
+                    <ImageView
+                        android:id="@+id/iv_statistics_btn"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:layout_toLeftOf="@id/iv_settings_btn"
+                        android:src="@drawable/statistics_icon" />
+
+                    <ImageView
+                        android:id="@+id/iv_trophy_btn"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:layout_toLeftOf="@id/iv_statistics_btn"
+                        android:src="@drawable/trophy_icon" />
+
+                    <ImageView
+                        android:id="@+id/iv_LangChange"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:src="@drawable/languagechange_icon" />
+                </RelativeLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#F1F2FA"
+                        android:orientation="vertical">
+
+                        <!--<com.google.android.gms.ads.AdView
+                            xmlns:ads="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/adView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_gravity="center_horizontal"
+                            ads:adSize="BANNER"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            ads:adUnitId="ca-app-pub-3793720534573472/9326306002">
+                        </com.google.android.gms.ads.AdView>-->
+
+
+                        /**
+                        * Banner ad for testing below
+                        *
+                        */
+
+                        <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/adView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="@dimen/_52sdp"
+                            ads:adSize="BANNER"
+                            ads:adUnitId="ca-app-pub-3940256099942544/6300978111"></com.google.android.gms.ads.AdView>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/ll_grid_one"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_marginTop="@dimen/_20sdp"
+                                android:layout_weight="1"
+                                android:gravity="center_horizontal">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent">
+
+                                    <TextView
+                                        android:id="@+id/et_1"
+                                        android:layout_width="0dp"
+                                        android:layout_height="0dp"
+                                        android:background="@drawable/bg_answer"
+                                        android:fontFamily="sans-serif-medium"
+                                        android:gravity="center"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/keyboard_box_text_size"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintDimensionRatio="1:1"
+                                        app:layout_constraintLeft_toLeftOf="parent"
+                                        app:layout_constraintRight_toLeftOf="@+id/et_2"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <TextView
+                                        android:id="@+id/et_2"
+                                        android:layout_width="0dp"
+                                        android:layout_height="0dp"
+                                        android:layout_marginLeft="2dp"
+                                        android:layout_marginRight="2dp"
+                                        android:background="@drawable/bg_answer"
+                                        android:fontFamily="sans-serif-medium"
+                                        android:gravity="center"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/keyboard_box_text_size"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintDimensionRatio="1:1"
+                                        app:layout_constraintLeft_toRightOf="@+id/et_1"
+                                        app:layout_constraintRight_toLeftOf="@+id/et_3"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <TextView
+                                        android:id="@+id/et_3"
+                                        android:layout_width="0dp"
+                                        android:layout_height="0dp"
+                                        android:background="@drawable/bg_answer"
+                                        android:fontFamily="sans-serif-medium"
+                                        android:gravity="center"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/keyboard_box_text_size"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintDimensionRatio="1:1"
+                                        app:layout_constraintLeft_toRightOf="@+id/et_2"
+                                        app:layout_constraintRight_toRightOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/ll_grid_two"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_marginTop="2dp"
+                                android:layout_weight="1"
+                                android:gravity="center_horizontal">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent">
+
+                                    <TextView
+                                        android:id="@+id/et_4"
+                                        android:layout_width="0dp"
+                                        android:layout_height="0dp"
+                                        android:background="@drawable/bg_answer"
+                                        android:fontFamily="sans-serif-medium"
+                                        android:gravity="center"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/keyboard_box_text_size"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintDimensionRatio="1:1"
+                                        app:layout_constraintLeft_toLeftOf="parent"
+                                        app:layout_constraintRight_toLeftOf="@+id/et_5"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <TextView
+                                        android:id="@+id/et_5"
+                                        android:layout_width="0dp"
+                                        android:layout_height="0dp"
+                                        android:layout_marginLeft="2dp"
+                                        android:layout_marginRight="2dp"
+                                        android:background="@drawable/bg_answer"
+                                        android:fontFamily="sans-serif-medium"
+                                        android:gravity="center"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/keyboard_box_text_size"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintDimensionRatio="1:1"
+                                        app:layout_constraintLeft_toRightOf="@+id/et_4"
+                                        app:layout_constraintRight_toLeftOf="@+id/et_6"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <TextView
+                                        android:id="@+id/et_6"
+                                        android:layout_width="0dp"
+                                        android:layout_height="0dp"
+                                        android:background="@drawable/bg_answer"
+                                        android:fontFamily="sans-serif-medium"
+                                        android:gravity="center"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/keyboard_box_text_size"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintDimensionRatio="1:1"
+                                        app:layout_constraintLeft_toRightOf="@+id/et_5"
+                                        app:layout_constraintRight_toRightOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/ll_grid_three"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_marginTop="2dp"
+                                android:layout_weight="1"
+                                android:gravity="center_horizontal">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent">
+
+                                    <TextView
+                                        android:id="@+id/et_7"
+                                        android:layout_width="0dp"
+                                        android:layout_height="0dp"
+                                        android:background="@drawable/bg_answer"
+                                        android:fontFamily="sans-serif-medium"
+                                        android:gravity="center"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/keyboard_box_text_size"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintDimensionRatio="1:1"
+                                        app:layout_constraintLeft_toLeftOf="parent"
+                                        app:layout_constraintRight_toLeftOf="@+id/et_8"
+                                        app:layout_constraintTop_toTopOf="parent"></TextView>
+
+                                    <TextView
+                                        android:id="@+id/et_8"
+                                        android:layout_width="0dp"
+                                        android:layout_height="0dp"
+                                        android:layout_marginLeft="2dp"
+                                        android:layout_marginRight="2dp"
+                                        android:background="@drawable/bg_answer"
+                                        android:fontFamily="sans-serif-medium"
+                                        android:gravity="center"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/keyboard_box_text_size"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintDimensionRatio="1:1"
+                                        app:layout_constraintLeft_toRightOf="@+id/et_7"
+                                        app:layout_constraintRight_toLeftOf="@+id/et_9"
+                                        app:layout_constraintTop_toTopOf="parent"></TextView>
+
+                                    <TextView
+                                        android:id="@+id/et_9"
+                                        android:layout_width="0dp"
+                                        android:layout_height="0dp"
+                                        android:background="@drawable/bg_answer"
+                                        android:fontFamily="sans-serif-medium"
+                                        android:gravity="center"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/keyboard_box_text_size"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintDimensionRatio="1:1"
+                                        app:layout_constraintLeft_toRightOf="@+id/et_8"
+                                        app:layout_constraintRight_toRightOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/ll_grid_four"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_marginTop="2dp"
+                                android:layout_weight="1"
+                                android:gravity="center_horizontal">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent">
+
+                                    <TextView
+                                        android:id="@+id/et_10"
+                                        android:layout_width="0dp"
+                                        android:layout_height="0dp"
+                                        android:background="@drawable/bg_answer"
+                                        android:fontFamily="sans-serif-medium"
+                                        android:gravity="center"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/keyboard_box_text_size"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintDimensionRatio="1:1"
+                                        app:layout_constraintLeft_toLeftOf="parent"
+                                        app:layout_constraintRight_toLeftOf="@+id/et_11"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <TextView
+                                        android:id="@+id/et_11"
+                                        android:layout_width="0dp"
+                                        android:layout_height="0dp"
+                                        android:layout_marginLeft="2dp"
+                                        android:layout_marginRight="2dp"
+                                        android:background="@drawable/bg_answer"
+                                        android:fontFamily="sans-serif-medium"
+                                        android:gravity="center"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/keyboard_box_text_size"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintDimensionRatio="1:1"
+                                        app:layout_constraintLeft_toRightOf="@+id/et_10"
+                                        app:layout_constraintRight_toLeftOf="@+id/et_12"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <TextView
+                                        android:id="@+id/et_12"
+                                        android:layout_width="0dp"
+                                        android:layout_height="0dp"
+                                        android:background="@drawable/bg_answer"
+                                        android:fontFamily="sans-serif-medium"
+                                        android:gravity="center"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/keyboard_box_text_size"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintDimensionRatio="1:1"
+                                        app:layout_constraintLeft_toRightOf="@+id/et_11"
+                                        app:layout_constraintRight_toRightOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/ll_grid_five"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_marginTop="2dp"
+                                android:layout_weight="1"
+                                android:gravity="center_horizontal">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent">
+
+                                    <TextView
+                                        android:id="@+id/et_13"
+                                        android:layout_width="0dp"
+                                        android:layout_height="0dp"
+                                        android:background="@drawable/bg_answer"
+                                        android:fontFamily="sans-serif-medium"
+                                        android:gravity="center"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/keyboard_box_text_size"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintDimensionRatio="1:1"
+                                        app:layout_constraintLeft_toLeftOf="parent"
+                                        app:layout_constraintRight_toLeftOf="@+id/et_14"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <TextView
+                                        android:id="@+id/et_14"
+                                        android:layout_width="0dp"
+                                        android:layout_height="0dp"
+                                        android:layout_marginLeft="2dp"
+                                        android:layout_marginRight="2dp"
+                                        android:background="@drawable/bg_answer"
+                                        android:fontFamily="sans-serif-medium"
+                                        android:gravity="center"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/keyboard_box_text_size"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintDimensionRatio="1:1"
+                                        app:layout_constraintLeft_toRightOf="@+id/et_13"
+                                        app:layout_constraintRight_toLeftOf="@+id/et_15"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <TextView
+                                        android:id="@+id/et_15"
+                                        android:layout_width="0dp"
+                                        android:layout_height="0dp"
+                                        android:background="@drawable/bg_answer"
+                                        android:fontFamily="sans-serif-medium"
+                                        android:gravity="center"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/keyboard_box_text_size"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintDimensionRatio="1:1"
+                                        app:layout_constraintLeft_toRightOf="@+id/et_14"
+                                        app:layout_constraintRight_toRightOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            </LinearLayout>
+
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_45sdp"
+                                android:layout_marginLeft="@dimen/_15sdp"
+                                android:layout_marginRight="@dimen/_15sdp"
+                                android:layout_marginBottom="16dp">
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:background="@drawable/box_radius"
+                                    android:backgroundTint="@color/text_color_black"
+                                    android:paddingBottom="@dimen/_4sdp">
+
+                                    <RelativeLayout
+                                        android:id="@+id/rl_hint"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/bg_hint"
+                                        android:clickable="true"
+                                        android:paddingLeft="@dimen/_16sdp"
+                                        android:paddingRight="@dimen/_16sdp"
+                                        android:visibility="gone">
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerInParent="true">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginRight="@dimen/_4sdp"
+                                                android:text="@string/hint_text"
+                                                android:textColor="@color/white"
+                                                android:textSize="@dimen/_13sdp"
+                                                android:textStyle="bold" />
+
+
+                                            <androidx.appcompat.widget.AppCompatImageView
+                                                android:layout_width="@dimen/_20sdp"
+                                                android:layout_height="@dimen/_20sdp"
+                                                android:layout_marginLeft="@dimen/_4sdp"
+                                                android:src="@drawable/hint_icon"
+                                                app:tint="@color/white" />
+                                        </LinearLayout>
+                                    </RelativeLayout>
+
+                                </RelativeLayout>
+
+
+                                <!--      <Button
+                                          android:layout_width="wrap_content"
+                                          android:layout_height="wrap_content"
+                                          android:layout_alignParentLeft="true"
+                                          android:layout_marginLeft="12dp"
+                                          android:background="#000"
+                                          android:text="हिंट">
+
+                                      </Button>-->
+
+                                <!-- <Button
+                                     android:layout_width="wrap_content"
+                                     android:layout_height="wrap_content"
+                                     android:layout_alignParentRight="true"
+                                     android:layout_marginRight="12dp"
+                                     android:background="#000"
+                                     android:text="उत्तर देखो">
+
+                                 </Button>-->
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true">
+
+                                    <ImageView
+                                        android:id="@+id/iv_timer_icon"
+                                        android:layout_width="@dimen/_17sdp"
+                                        android:layout_height="@dimen/_17sdp"
+                                        android:layout_marginLeft="@dimen/_30sdp"
+                                        android:layout_marginTop="@dimen/_18sdp"
+                                        android:layout_toRightOf="@id/rl_hint"
+                                        android:src="@drawable/timer_icon" />
+
+                                    <Chronometer
+                                        android:id="@+id/tv_timer_text"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="@dimen/_5sdp"
+                                        android:layout_marginTop="@dimen/_18sdp"
+                                        android:layout_marginRight="@dimen/_35sdp"
+                                        android:layout_toRightOf="@id/iv_timer_icon"
+                                        android:text=""
+                                        android:textColor="@color/text_color_black"
+                                        android:textSize="@dimen/_13sdp" />
+                                </LinearLayout>
+
+                                <RelativeLayout
+                                    android:id="@+id/rLayUttarDekho"
+                                    android:layout_width="@dimen/_100sdp"
+                                    android:layout_height="@dimen/_35sdp"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:background="@drawable/box_radius"
+                                    android:backgroundTint="@color/text_color_black"
+                                    android:paddingBottom="@dimen/_4sdp"
+                                    android:visibility="visible">
+
+                                    <RelativeLayout
+                                        android:id="@+id/rl_uttar_dekho_btn"
+                                        android:layout_width="@dimen/_100sdp"
+                                        android:layout_height="@dimen/_35sdp"
+
+                                        android:layout_alignParentRight="true"
+                                        android:background="@drawable/bg_uttar_dekho"
+                                        android:paddingLeft="@dimen/_12sdp"
+                                        android:paddingRight="@dimen/_12sdp">
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerInParent="true">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginRight="@dimen/_4sdp"
+                                                android:text="@string/answer_dekho_text"
+                                                android:textColor="@color/white"
+                                                android:textSize="@dimen/_13sdp"
+                                                android:textStyle="bold" />
+
+                                            <androidx.appcompat.widget.AppCompatImageView
+                                                android:layout_width="35dp"
+                                                android:layout_height="match_parent"
+                                                android:layout_marginLeft="@dimen/_4sdp"
+                                                android:src="@drawable/uttar_dekho_icon"
+                                                app:tint="@color/white" />
+                                        </LinearLayout>
+                                    </RelativeLayout>
+
+                                </RelativeLayout>
+
+
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentBottom="true"
+                                android:layout_gravity="bottom"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_marginLeft="12dp"
+                                    android:layout_marginTop="2dp"
+                                    android:layout_marginRight="12dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center_horizontal"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/tv_ka"
+                                        style="@style/key_style_default"
+                                        android:text="क" />
+
+                                    <TextView
+                                        android:id="@+id/tv_kha"
+                                        style="@style/key_style_default"
+                                        android:layout_marginLeft="4dp"
+                                        android:text="ख" />
+
+                                    <TextView
+                                        android:id="@+id/tv_ga"
+                                        style="@style/key_style_default"
+                                        android:layout_marginLeft="4dp"
+                                        android:text="ग" />
+
+                                    <TextView
+                                        android:id="@+id/tv_gha"
+                                        style="@style/key_style_default"
+                                        android:layout_marginLeft="4dp"
+                                        android:text="घ" />
+
+                                    <TextView
+                                        android:id="@+id/tv_anga"
+                                        style="@style/key_style_default"
+                                        android:layout_marginLeft="4dp"
+                                        android:text="ङ" />
+
+                                    <TextView
+                                        android:id="@+id/tv_cha"
+                                        style="@style/key_style_default"
+                                        android:layout_marginLeft="4dp"
+                                        android:text="च" />
+
+                                    <TextView
+                                        android:id="@+id/tv_chah"
+                                        style="@style/key_style_default"
+                                        android:layout_marginLeft="4dp"
+                                        android:text="छ" />
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_marginLeft="12dp"
+                                    android:layout_marginTop="4dp"
+                                    android:layout_marginRight="12dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center_horizontal"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/tv_ja"
+                                        style="@style/key_style_default"
+                                        android:text="ज" />
+
+                                    <TextView
+                                        android:id="@+id/tv_jha"
+                                        style="@style/key_style_default"
+                                        android:layout_marginLeft="4dp"
+                                        android:text="झ" />
+
+                                    <TextView
+                                        android:id="@+id/tv_ea"
+                                        style="@style/key_style_default"
+                                        android:layout_marginLeft="4dp"
+                                        android:text="ञ" />
+
+
+                                    <TextView
+                                        android:id="@+id/tv_ta"
+                                        style="@style/key_style_default"
+                                        android:layout_marginLeft="4dp"
+                                        android:text="ट" />
+
+                                    <TextView
+                                        android:id="@+id/tdha"
+                                        style="@style/key_style_default"
+                                        android:layout_marginLeft="4dp"
+                                        android:text="ठ" />
+
+                                    <TextView
+                                        android:id="@+id/tv_da"
+                                        style="@style/key_style_default"
+                                        android:layout_marginLeft="4dp"
+                                        android:text="ड" />
+
+                                    <TextView
+                                        android:id="@+id/tv_dha"
+                                        style="@style/key_style_default"
+                                        android:layout_marginLeft="4dp"
+                                        android:text="ढ" />
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_marginLeft="12dp"
+                                    android:layout_marginTop="4dp"
+                                    android:layout_marginRight="12dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center_horizontal"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/tv_ada"
+                                        style="@style/key_style_default"
+                                        android:layout_marginLeft="4dp"
+                                        android:text="ण" />
+
+                                    <TextView
+                                        android:id="@+id/tv_tea"
+                                        style="@style/key_style_default"
+                                        android:layout_marginLeft="4dp"
+                                        android:text="त" />
+
+                                    <TextView
+                                        android:id="@+id/tv_tha"
+                                        style="@style/key_style_default"
+                                        android:layout_marginLeft="4dp"
+                                        android:text="थ" />
+
+                                    <TextView
+                                        android:id="@+id/tv_dea"
+                                        style="@style/key_style_default"
+                                        android:layout_marginLeft="4dp"
+                                        android:text="द" />
+
+                                    <TextView
+                                        android:id="@+id/tv_dhea"
+                                        style="@style/key_style_default"
+                                        android:layout_marginLeft="4dp"
+                                        android:text="ध" />
+
+                                    <TextView
+                                        android:id="@+id/tv_na"
+                                        style="@style/key_style_default"
+                                        android:layout_marginLeft="4dp"
+                                        android:text="न" />
+
+
+                                    <TextView
+                                        android:id="@+id/tv_pa"
+                                        style="@style/key_style_default"
+                                        android:layout_marginLeft="4dp"
+                                        android:text="प" />
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_marginLeft="12dp"
+                                    android:layout_marginTop="4dp"
+                                    android:layout_marginRight="12dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center_horizontal"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/tv_fa"
+                                        style="@style/key_style_default"
+                                        android:layout_marginLeft="4dp"
+                                        android:text="फ" />
+
+                                    <TextView
+                                        android:id="@+id/tv_ba"
+                                        style="@style/key_style_default"
+                                        android:layout_marginLeft="4dp"
+                                        android:text="ब" />
+
+                                    <TextView
+                                        android:id="@+id/tv_bha"
+                                        style="@style/key_style_default"
+                                        android:layout_marginLeft="4dp"
+                                        android:text="भ" />
+
+                                    <TextView
+                                        android:id="@+id/tv_ma"
+                                        style="@style/key_style_default"
+                                        android:layout_marginLeft="4dp"
+                                        android:text="म" />
+
+                                    <TextView
+                                        android:id="@+id/tv_ya"
+                                        style="@style/key_style_default"
+                                        android:layout_marginLeft="4dp"
+                                        android:text="य" />
+
+                                    <TextView
+                                        android:id="@+id/tv_ra"
+                                        style="@style/key_style_default"
+                                        android:layout_marginLeft="4dp"
+                                        android:text="र" />
+
+
+                                    <TextView
+                                        android:id="@+id/tv_la"
+                                        style="@style/key_style_default"
+                                        android:layout_marginLeft="4dp"
+                                        android:text="ल" />
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_marginLeft="12dp"
+                                    android:layout_marginTop="4dp"
+                                    android:layout_marginRight="12dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center_horizontal"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/tv_va"
+                                        style="@style/key_style_default"
+                                        android:layout_marginLeft="4dp"
+                                        android:text="व" />
+
+                                    <TextView
+                                        android:id="@+id/tv_sha"
+                                        style="@style/key_style_default"
+                                        android:layout_marginLeft="4dp"
+                                        android:text="श" />
+
+                                    <TextView
+                                        android:id="@+id/tv_skha"
+                                        style="@style/key_style_default"
+                                        android:layout_marginLeft="4dp"
+                                        android:text="ष" />
+
+                                    <TextView
+                                        android:id="@+id/tv_sa"
+                                        style="@style/key_style_default"
+                                        android:layout_marginLeft="4dp"
+                                        android:text="स" />
+
+                                    <TextView
+                                        android:id="@+id/tv_ha"
+                                        style="@style/key_style_default"
+                                        android:layout_marginLeft="4dp"
+                                        android:text="ह" />
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_marginLeft="12dp"
+                                    android:layout_marginTop="4dp"
+                                    android:layout_marginRight="12dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center_horizontal"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/tv_chota_a"
+                                        style="@style/key_style_default"
+                                        android:text="अ" />
+
+                                    <TextView
+                                        android:id="@+id/tv_bada_a"
+                                        style="@style/key_style_default"
+                                        android:layout_marginLeft="4dp"
+                                        android:text="आ" />
+
+                                    <TextView
+                                        android:id="@+id/tv_choti_e"
+                                        style="@style/key_style_default"
+                                        android:layout_marginLeft="4dp"
+                                        android:text="इ" />
+
+                                    <TextView
+                                        android:id="@+id/tv_badi_e"
+                                        style="@style/key_style_default"
+                                        android:layout_marginLeft="4dp"
+                                        android:text="ई" />
+
+                                    <TextView
+                                        android:id="@+id/tv_chota_u"
+                                        style="@style/key_style_default"
+                                        android:layout_marginLeft="4dp"
+
+                                        android:text="उ" />
+
+                                    <TextView
+                                        android:id="@+id/tv_bada_u"
+                                        style="@style/key_style_default"
+                                        android:layout_marginLeft="4dp"
+                                        android:text="ऊ" />
+
+                                    <TextView
+                                        android:id="@+id/tv_rishi"
+                                        style="@style/key_style_default"
+                                        android:layout_marginLeft="4dp"
+                                        android:text="ऋ" />
+
+                                    <TextView
+                                        android:id="@+id/tv_lira"
+                                        style="@style/key_style_default"
+                                        android:layout_marginLeft="4dp"
+                                        android:text="ऌ" />
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_marginTop="@dimen/_4sdp"
+                                    android:layout_marginBottom="12dp"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal">
+
+
+                                    <TextView
+                                        android:id="@+id/tv_cross"
+                                        style="@style/key_style_default"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginLeft="@dimen/_8sdp"
+                                        android:layout_marginTop="4dp"
+                                        android:layout_marginRight="8dp"
+                                        android:layout_weight="1"
+                                        android:text="X" />
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:orientation="vertical">
+
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginLeft="12dp"
+                                            android:layout_marginTop="4dp"
+                                            android:layout_marginRight="12dp"
+                                            android:gravity="center_horizontal"
+                                            android:orientation="horizontal">
+
+                                            <TextView
+                                                android:id="@+id/tv_chot_ae"
+                                                style="@style/key_style_default"
+                                                android:text="ए" />
+
+                                            <TextView
+                                                android:id="@+id/tv_bada_ae"
+                                                style="@style/key_style_default"
+                                                android:layout_marginLeft="4dp"
+                                                android:text="ऐ" />
+
+                                            <TextView
+                                                android:id="@+id/tv_chota_o"
+                                                style="@style/key_style_default"
+                                                android:layout_marginLeft="4dp"
+                                                android:text="ओ" />
+
+                                            <TextView
+                                                android:id="@+id/tv_bada_o"
+                                                style="@style/key_style_default"
+                                                android:layout_marginLeft="4dp"
+                                                android:text="औ" />
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+                                    <TextView
+                                        android:id="@+id/tv_enter"
+                                        style="@style/key_style_default"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginLeft="8dp"
+                                        android:layout_marginTop="4dp"
+                                        android:layout_marginRight="@dimen/_8sdp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/bg_enter"
+                                        android:text="एंटर"
+                                        android:textColor="@color/white"
+
+                                        />
+
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <FrameLayout
+                        android:id="@+id/fl_loading"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#aaffffff"
+                        android:visibility="gone">
+
+                        <ProgressBar
+                            android:layout_width="@dimen/_48sdp"
+                            android:layout_height="@dimen/_48sdp"
+                            android:layout_gravity="center">
+
+                        </ProgressBar>
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/fl_dic_error"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_160sdp"
+                        android:layout_gravity="bottom"
+                        android:background="#80ff0000"
+                        android:clickable="true"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="शब्द हमारे शब्दकोश में नहीं है।"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_24sdp" />
+
+                    </FrameLayout>
+                </FrameLayout>
+
+            </FrameLayout>
+        </LinearLayout>
+
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="@color/white"
+            android:fitsSystemWindows="false"
+            app:headerLayout="@layout/nav_drawer_layout"></com.google.android.material.navigation.NavigationView>
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+
+</LinearLayout>

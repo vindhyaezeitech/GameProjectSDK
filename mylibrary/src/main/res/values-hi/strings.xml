@@ -1,0 +1,94 @@
+
+<resources xmlns:tools="http://schemas.android.com/tools">
+<string name="app_name">shabdamsdk</string>
+
+<string name="guptshabd">गुप्त शब्द</string>
+<string name="kaise_khele">कैसे खेलें ?</string>
+<string name="find_text">छिपे शब्द के मिटे अक्षर खोजिए कीबोर्ड के साथ। </string>
+<string name="paheli_text">हर बार एक नई पहेली </string>
+<string name="a_text">ऐ</string>
+<string name="bha_text">भ</string>
+<string name="l_text">ऌ</string>
+<string name="shabd_text">अक्षर शब्द में नहीं है</string>
+<string name="shabd_text1">अक्षर शब्द में कहीं और है</string>
+<string name="shabd_text2">सही अक्षर</string>
+<string name="continue_text">कंटिन्यू</string>
+<string name="settings_text">सेटिंग्स</string>
+<string name="version_code">Ver 0.1</string>
+<string name="notification">नोटिफिकेशन</string>
+<string name="feedback">फीडबैक</string>
+<string name="community">कम्युनिटी</string>
+<string name="question_text">प्रशन पूछें</string>
+<string name="email_text">ईमेल</string>
+<string name="faq_text">FAQ</string>
+<string name="leaderboard_text">लीडरबॉर्ड</string>
+<string name="aapka_leaderboard_text">आपका लीडरबॉर्ड</string>
+<string name="time_content_text">05:10</string>
+<string name="shabdam_text">शब्दम</string>
+<string name="koi_baat_nahi_text">कोई बात नही</string>
+<string name="agli_baar_text">आप अगली बार अच्छा करेंगे </string>
+<string name="sahi_jabab_text">सही जवाब </string>
+<string name="agla_shabd_text">अगला शब्द </string>
+<string name="share_text">शेयर ऐप</string>
+<string name="statistics_text">स्टेटिस्टिक्स</string>
+<string name="played_text">Played</string>
+<string name="win_text" tools:ignore="DuplicateDefinition">% Win</string>
+<string name="current_streak_text">Current \n Streak</string>
+<string name="max_streak_text">Max Streak</string>
+<string name="samay_laga_text">समय लगा </string>
+<string name="gas_distribution_text">गेस डिस्ट्रीब्यूशन</string>
+<string name="hint_text">हिंट</string>
+<string name="answer_dekho_text">उत्तर देखो</string>
+<string name="logout_text">लॉग आउट</string>
+<string name="start_kare_text">आएँ शुरू करें</string>
+<string name="new_paheli_text">हर बार एक नई पहेली</string>
+<string name="welcome_text">स्वागत है</string>
+<string name="play_as_guest_text">Play as Guest</string>
+<string name="aage_bade_button_text">आगे बढ़ें</string>
+<string name="checkbox_text">अगली बार ना दिखाएँ</string>
+<string name="namaste_text">नमस्ते</string>
+<string name="leaderboard_sign_in_text">आज का लीडरबॉर्ड देखने के लिए</string>
+<string name="leaderboard_sign_in_text1">कृपया साइन इन करें</string>
+<string name="statistics_sign_in_text">आंकड़े देखने के लिए कृपया</string>
+<string name="statistics_sign_in_text1">साइन इन करें</string>
+
+// Right Answer Text
+<string name="right_answer">व</string>
+<string name="right_answer1">र्ण</string>
+<string name="right_answer2">मा</string>
+<string name="right_answer3">ला</string>
+
+// Name
+<string name="name">शिवा</string>
+<string name="name1">शेखर</string>
+<string name="name2">मयंक</string>
+<string name="aap_text">आप</string>
+<string name="please_login">Sign in</string>
+<string name="login_with_google">Sign in with google</string>
+<string name="ensure_internet">Please ensure internet connectivity.</string>
+<string name="share_message_with_share">Share - Message with Share</string>
+<string name="setting_nav">Setting</string>
+<string name="privacy_policy">Privacy policy</string>
+<string name="terms_uses"><![CDATA[Terms & uses]]></string>
+<string name="new_games_from_tv_today">New games from TV Today</string>
+<string name="hint_txt">Hint</string>
+<string name="improve_time">अपना समय सुधारे।</string>
+    <string name="privacy_policy_">प्राइवेसी पालिसी</string>
+    <string name="submit_the_word"> शब्द जमा करें</string>
+
+//hindi language text------------------------------------
+
+    <string name="hi_eng">नमस्ते,</string>
+    <string name="new_games_from_tv_today_eng">टीवी टुडे के नए गेम</string>
+    <string name="tutorial_eng">ट्यूटोरियल</string>
+    <string name="share_eng">शेयर ऐप</string>
+    <string name="setting_eng">सेटिंग</string>
+    <string name="privacy_policy_eng">प्राइवेसी पालिसी</string>
+    <string name="sound_h">साउंड</string>
+    <string name="game_langauge">भाषा चुनें</string>
+    <string name="statistics_text_hindi">आपकी स्टेटिस्टिक्स</string>
+
+    <string name="google_login_text">गूगल के साथ साइन इन करें</string>
+
+    <string name="login_to_play_pastPpuzzle_txt">पुरानी पहेलियाँ खेलने के लिए लॉगिन करें</string>
+</resources>

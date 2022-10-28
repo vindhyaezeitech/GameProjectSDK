@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="answer_box_size">52dp</dimen>
+    <dimen name="keyboard_box_size">32dp</dimen>
+    <dimen name="keyboard_box_text_size">22dp</dimen>
+</resources>

@@ -1,0 +1,93 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">shabdamsdk</string>
+
+    <string name="leaderboard_sign_in_text1">कृपया साइन इन करें</string>
+    <string name="guptshabd">गुप्त शब्द</string>
+    <string name="kaise_khele">How to play?</string>
+    <string name="find_text">Find the missing letters of the hidden word with keyboard.</string>
+    <string name="paheli_text">A new puzzle every time </string>
+    <string name="a_text">A</string>
+    <string name="bha_text">B</string>
+    <string name="l_text">L</string>
+    <string name="shabd_text">Letter not in the word </string>
+    <string name="shabd_text1">Letter is elsewhere in the word</string>
+    <string name="shabd_text2">Correct letter</string>
+    <string name="continue_text">Continue</string>
+    <string name="settings_text">Setting</string>
+    <string name="version_code">Ver 0.1</string>
+    <string name="notification">Notification</string>
+    <string name="feedback">Feedback</string>
+    <string name="community">Community</string>
+    <string name="question_text">Ask questions</string>
+    <string name="email_text">Email</string>
+    <string name="faq_text">FAQ</string>
+    <string name="leaderboard_text">LeaderBoard</string>
+    <string name="aapka_leaderboard_text">Today’s Leaderboard</string>
+    <string name="time_content_text">05:10</string>
+    <string name="shabdam_text">Shabdam</string>
+    <string name="koi_baat_nahi_text">Don’t worry</string>
+    <string name="agli_baar_text">You will do better next time</string>
+    <string name="sahi_jabab_text">Correct Answer</string>
+    <string name="agla_shabd_text">Next Word</string>
+    <string name="share_text">Share</string>
+    <string name="statistics_text">Statistics</string>
+    <string name="played_text">Played</string>
+    <string name="win_text" tools:ignore="DuplicateDefinition">% Win</string>
+    <string name="current_streak_text">Current \n Streak</string>
+    <string name="max_streak_text">Max Streak</string>
+    <string name="samay_laga_text">समय लगा </string>
+    <string name="gas_distribution_text">GUESS DISTRIBUTION</string>
+    <string name="hint_text">Hint</string>
+    <string name="answer_dekho_text">See Answer</string>
+    <string name="logout_text">Logout</string>
+    <string name="start_kare_text">Let’s Start</string>
+    <string name="new_paheli_text">हर बार एक नई पहेली</string>
+    <string name="welcome_text">स्वागत है</string>
+    <string name="play_as_guest_text">Play as Guest</string>
+    <string name="aage_bade_button_text">Process</string>
+    <string name="checkbox_text">Don\'t show next time</string>
+    <string name="namaste_text">Hi</string>
+    <string name="leaderboard_sign_in_text">Please sign in to view statistics</string>
+    <string name="statistics_sign_in_text">आंकड़े देखने के लिए कृपया</string>
+    <string name="statistics_sign_in_text1">साइन इन करें</string>
+
+    // Right Answer Text
+    <string name="right_answer">व</string>
+    <string name="right_answer1">र्ण</string>
+    <string name="right_answer2">मा</string>
+    <string name="right_answer3">ला</string>
+
+    // Name
+    <string name="name">शिवा</string>
+    <string name="name1">शेखर</string>
+    <string name="name2">मयंक</string>
+    <string name="aap_text">आप</string>
+    <string name="please_login">Sign in</string>
+    <string name="login_with_google">Sign in with google</string>
+    <string name="ensure_internet">Please ensure internet connectivity.</string>
+    <string name="share_message_with_share">Share</string>
+    <string name="setting_nav">Setting</string>
+    <string name="privacy_policy">Privacy policy</string>
+    <string name="terms_uses"><![CDATA[Terms & uses]]></string>
+    <string name="new_games_from_tv_today">New games from TV Today</string>
+    <string name="hint_txt">Hint</string>
+    <string name="improve_time">Play again and improve your time</string>
+    <string name="privacy_policy_" translatable="false"><![CDATA[Privacy & policy]]></string>
+    <string name="submit_the_word">Submit the word</string>
+
+    <string name="hi_eng">Hi,</string>
+    <string name="new_games_from_tv_today_eng">New games from TV Today</string>
+    <string name="tutorial_eng">Tutorial</string>
+    <string name="share_eng">Share</string>
+    <string name="setting_eng">Setting</string>
+    <string name="privacy_policy_eng">Privacy Policy</string>
+    <string name="sound_h">Sound</string>
+    <string name="game_langauge">Game Langauge</string>
+    <string name="statistics_text_hindi">Your Statistics</string>
+    <string name="google_login_text">Sign in with google</string>
+    <string name="login_to_play_pastPpuzzle_txt">Login to play past puzzles</string>
+
+    //english language text------------------------------------
+
+
+</resources>
